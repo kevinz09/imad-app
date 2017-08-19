@@ -7,7 +7,7 @@ app.use(morgan('combined'));
 
 var content= {
     title:'arc-one',
-    heading:'artcile-one',
+    heading:'article-one',
     date:'aug 18,2017',
     content:`
     <p> the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's.
@@ -49,7 +49,6 @@ function createTemplate(data) {
         </body>
         
     </html>
-    
     `;
     return htmlTemplate;
 }
