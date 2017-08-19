@@ -5,7 +5,8 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var arcone= {
+var articles= {
+arcone: {
     title:'article-one',
     heading:'article-one',
     date:'aug 18,2017',
@@ -16,6 +17,29 @@ var arcone= {
      </p>
      <p> the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's.
      </p>`
+},
+arctwo:{ title:'article-two',
+    heading:'article-two',
+    date:'aug 19,2017',
+    content:`
+    <p> the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's.
+    </p>
+    <p> the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's.conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's.conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's.
+     </p>
+     <p> the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's.
+     </p>`
+},
+arcthree:{ title:'article-three',
+    heading:'article-three',
+    date:'aug 18,2017',
+    content:`
+    <p> the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's.
+    </p>
+    <p> the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's.conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's.conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's.
+     </p>
+     <p> the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's.
+     </p>`
+},
 };
 function createTemplate(data) {
     var title= data.title;
