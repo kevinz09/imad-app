@@ -58,16 +58,16 @@ app.get('/', function (req, res) {
 });
 
 app.get('/arc-one', function(req, res) {
-res.send(createTemplate(arc-one))
+res.send(createTemplate(arc-one));
     
 });
 
 app.get('/arc-two', function(req, res) {
-      res.send(createTemplate(arc-two))
+      res.send(createTemplate(arc-two));
 });
 
 app.get('/arc-three', function(req, res) {
-res.send(createTemplate(arc-three))
+res.send(createTemplate(arc-three));
     
 });
 
