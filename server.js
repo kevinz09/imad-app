@@ -5,20 +5,71 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
+var content= {
+    title:'arc-one',
+    heading:'artcile-one',
+    date:'aug 18,2017',
+    content:`
+    <p> the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's.
+    </p>
+    <p> the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's.conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's.conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's.
+     </p>
+     <p> the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's.
+     </p>`
+};
+function creatTemplate(data) {
+    var title= data.title
+    var heading= data.heading
+    var date= data.date
+    var content= data.content
+    
+    var htmlTemplate = `
+    <html>
+        <title>
+            ${title}
+        </title>
+            <link href="/ui/style.css" rel="stylesheet" />
+        <body>
+        <div class="container">
+                <div>
+                    <a href="/">Home</a>
+                </div>
+                <hr/>
+                <div>
+                    <h3>
+                        ${heading}
+                    </h3>
+                </div>
+                <div>
+                    ${date}
+                </div>
+                <div>
+                   ${content}
+                </div>
+         </div>
+        </body>
+        
+    </html>
+    
+    `;
+    return htmlTemplate;
+}
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
 app.get('/arc-one', function(req, res) {
-      res.sendFile(path.join(__dirname, 'ui', 'arc-one.html'));
+res.send(creatTemplate(arc-one))
+    
 });
 
 app.get('/arc-two', function(req, res) {
-      res.sendFile(path.join(__dirname, 'ui', 'arc-two.html'));
+      res.send(createTemplate(arc-two))
 });
 
 app.get('/arc-three', function(req, res) {
-      res.sendFile(path.join(__dirname, 'ui', 'arc-three.html'));
+res.send(creatTemplate(arc-three))
+    
 });
 
 app.get('/ui/style.css', function (req, res) {
