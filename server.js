@@ -5,8 +5,8 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var content= {
-    title:'arc-one',
+var arcone= {
+    title:'article-one',
     heading:'article-one',
     date:'aug 18,2017',
     content:`
@@ -22,7 +22,8 @@ function createTemplate(data) {
     var heading= data.heading;
     var date= data.date;
     var content= data.content;
-     var htmlTemplate = `
+     
+    var htmlTemplate = `
     <html>
         <title>
             ${title}
@@ -57,16 +58,16 @@ app.get('/', function (req, res) {
 });
 
 app.get('/arc-one', function(req, res) {
-res.send(createTemplate(arc-one));
+res.send(createTemplate(arcone));
     
 });
 
 app.get('/arc-two', function(req, res) {
-      res.send(createTemplate(arc-two));
+      res.send(createTemplate(arctwo));
 });
 
 app.get('/arc-three', function(req, res) {
-res.send(createTemplate(arc-three));
+res.send(createTemplate(arcthree));
     
 });
 
