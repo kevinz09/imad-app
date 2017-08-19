@@ -17,7 +17,7 @@ var content= {
      <p> the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's. the conectent is baksfjklfda'lsafjska's.
      </p>`
 };
-function creatTemplate(data) {
+function createTemplate(data) {
     var title= data.title
     var heading= data.heading
     var date= data.date
@@ -59,7 +59,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/arc-one', function(req, res) {
-res.send(creatTemplate(arc-one))
+res.send(createTemplate(arc-one))
     
 });
 
@@ -68,7 +68,7 @@ app.get('/arc-two', function(req, res) {
 });
 
 app.get('/arc-three', function(req, res) {
-res.send(creatTemplate(arc-three))
+res.send(createTemplate(arc-three))
     
 });
 
